@@ -1,26 +1,84 @@
 {% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf%} {% block content %}
 
-
-<div class="container">
-  <h1>LETS SIGN UP !!</h1>
-  <div class="jumbotron" >
-    <div class="row">
-      <div class="col-md-2"> </div>
-      <div class="col-md-8">
-        <!--Flash message -->
-        {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          {{ message }}
+<body>
+  <link rel="stylesheet" href="{{url_for('static' , filename = 'css/login.css')}}">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>SIGN UP </h1>
+    </div>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-8">
+          <!--Flash message -->
+          {% for message in get_flashed_messages() %}
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+          </div>
+          {% endfor %}
+          <!-- Login form -->
+          {{wtf.quick_form(login_form)}}
         </div>
-        {% endfor %}
-        <!-- Login form -->
-        {{wtf.quick_form(login_form)}}
         <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
       </div>
       <div clas="col-md-2"> </div>
     </div>
   </div>
-</div>
+</body>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+  body {
+    background-image: url('../../static/photos/bk4.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+
+  .subscribe {
+    font-family: 'Nunito', sans-serif !important;
+  }
+
+  .blogs {
+    font-family: 'Nunito', sans-serif !important;
+    width: 620px;
+    color: black !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+
+  .blogs:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-7px);
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h3 {
+    text-decoration-line: underline;
+  }
+
+  .view {
+    text-decoration-line: underline;
+    font-family: 'Nunito', sans-serif !important;
+  }
+
+  .thumbnail {
+    text-align: center;
+  }
+
+  .color {
+    color: black !important;
+    font-family: 'Nunito', sans-serif !important;
+
+  }
+</style>
 
 {% endblock%}

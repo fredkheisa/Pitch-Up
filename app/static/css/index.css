@@ -1,6 +1,10 @@
 .jumbotron{
-    background-color: brown ;
-   
+    background-image: url("/static/photos/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+     
 }
 
 h2{
