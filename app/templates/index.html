@@ -2,39 +2,53 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Lemon|Luckiest+Guy|Titan+One" rel="stylesheet"> {% endblock
 %} {% block content %}
-<div class="container-fluid">
-    <div class="jumbotron">
-        <h2>Pitch time</h2>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="well">
-                <p class="type">Jokes</p>
-                <div class="card-footer">
-                    <a href="/jokes/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="well">
 
-                <p class="type">Pick-up lines</p>
-                <div class="card-footer">
-                    <a href="/pick-up/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
+<body>
+    <div class="container-fluid">
+        <div class="">
+            <h2>Pitch UP</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <p class="type">Jokes</p>
+                    <div class="card-footer">
+                        <a href="/jokes/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="well">
+            <div class="col-md-3">
+                <div class="well">
 
-                <p class="type">Debate</p>
-                <div class="card-footer">
-                    <a href="/debate/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
+                    <p class="type">Pick-up LINES</p>
+                    <div class="card-footer">
+                        <a href="/pick-up/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+
+                    <p class="type">Debate</p>
+                    <div class="card-footer">
+                        <a href="/debate/" class="btn btn-info">Open Category<span class="glyphicon glyphicon-share-alt"></span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+<style>
+    body {
+        background-image: url('../static/photos/bk2.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
 
 {% endblock%}

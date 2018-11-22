@@ -12,7 +12,7 @@
           <!--Flash message -->
           {% for message in get_flashed_messages() %}
           <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="close btn-outline-success" data-dismiss="alert">&times;</button>
             {{ message }}
           </div>
           {% endfor %}
@@ -39,22 +39,8 @@
 
 
 
-  .subscribe {
+  .h1 {
     font-family: 'Nunito', sans-serif !important;
-  }
-
-  .blogs {
-    font-family: 'Nunito', sans-serif !important;
-    width: 620px;
-    color: black !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-  }
-
-  .blogs:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transform: translateY(-7px);
   }
 
   p {

@@ -1,27 +1,35 @@
-{% extends 'base.html' %}
-{% block styles%}
-{{ super() }}
+{% extends 'base.html' %} {% block styles%} {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/jokes.css')}}">
-<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet"> 
-{% endblock %}
+<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet"> {% endblock %}
 <!-- content block -->
 {% block content %}
 
-  <div class=" col-md-10 col-md-offset-1 col-sm-12">
-      <h3>Jokes</h3>
-      <blockquote>
-Laughter is the best medicine but if you laugh for no reason, you need medicine.
-</blockquote>
-       <a class="btn btn-primary text-center text-danger " href="/joke/new-joke/"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Post a Pitch</a>
-       <hr>
-  </div>
-  <div class=" col-md-10 col-md-offset-1 col-sm-12">
-            {% for joke in jokes%}
-            <p>{{joke.content}}</p>
-            <a class="btn btn-primary text-center text-danger" href="/view-joke/{{joke.id}}">View Comments</a>
-              <a class="btn btn-primary text-center text-danger" href="/comment/{{joke.id}}">Comment</a>
-             <hr>
-          {% endfor %}
-            </div>
-       
+<div class=" col-md-10 col-md-offset-1 col-sm-12">
+  <h3>Jokes</h3>
+  <blockquote>
+    Laugh alittle add a day to your life .
+  </blockquote>
+  <a class="btn btn-primary text-center text-danger " href="/joke/new-joke/"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    Post a joke</a>
+  <hr>
+</div>
+<div class=" col-md-10 col-md-offset-1 col-sm-12">
+  {% for joke in jokes%}
+  <p>{{joke.content}}</p>
+  <a class="btn btn-primary text-center text-danger" href="/view-joke/{{joke.id}}">Your Thoughts</a>
+  <a class="btn btn-primary text-center text-danger" href="/comment/{{joke.id}}">View Thoughts</a>
+  <hr> {% endfor %}
+</div>
+
+
+
+<style>
+  body {
+    background-image: url('../static/photos/bk2.jpg');
+    background-attachment: fixed;
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
 {% endblock %}
