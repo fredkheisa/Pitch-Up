@@ -8,7 +8,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://fred:pitchproject@localhost/pitch'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 class ProdConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get('HEROKU_POSTGRESQL_ROSE_URL')
 
 
 class DevConfig(Config):
