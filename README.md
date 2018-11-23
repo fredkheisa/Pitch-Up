@@ -25,7 +25,7 @@ A user can also add a pitch in one of the categories provided.
 The user can also customise their profile with a profile photo and a bio
 The user can also view another user's profile
 
-### Tech used :computer: 
+### Tech used
 1. HTML and CSS
 2. Python
 3. Flask
