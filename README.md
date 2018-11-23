@@ -6,7 +6,7 @@ Fred Kheisa
 ### Description
 This is a web application that allows posts comments and general interaction by different users.
 
-### User Stories :family:
+### User Stories
 1. As a user, I would like to view the pitches other people have posted.
 2. As a user, I would like to be signed in for me to leave a comment
 3. As a user, I would like to view the pitches I have created in my profile page.
